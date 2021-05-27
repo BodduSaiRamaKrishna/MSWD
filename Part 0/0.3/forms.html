@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Form Page</title>
+        <link rel="stylesheet" type="text/css" href="forms.css"/>
+    <script type="text/javascript">
+    function validate_loginform()
+         {
+           var passw=/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$/;
+           var user= /^[0-9a-zA-Z-'_]+$/;
+           var pw=document.loginform.password.value;
+           var un=document.loginform.username.value;
+           if(pw.match(passw)) 
+            { }
+           else
+           { 
+                    alert('Wrong...! Password....Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters');
+                    return false;
+           } 
+           if(un.match(user))
+            {}
+           else
+            {
+            alert("Invalid UserName ..!");
+            return false;
+            }
+             
+    }
+    </script>
+    </head>
+    <body>
+            <div class="loginbox">
+                 
+                <h1>Student Registration</h1>
+                <form action="login" method="post" onsubmit="return validate_loginform()">
+                    <input type="text" name= "username" placeholder="Username" required/>
+                    <input type="text" name="email" placeholder="Email" required/>
+                    <input type="Password" name="password" placeholder="Password" required/>
+                    <input type="Password" name="password" placeholder="Retype Password" required/>
+                    <input type="submit" name="submit" value="Login"/><br>
+                </form>
+                    <a href="fyp.jsp" align='center'>Forget your Password ?</a><br>
+                    <a href="signup.jsp" align='center'>Don't have account ?</a>
+            </div>
+    </body>
+    </html>
