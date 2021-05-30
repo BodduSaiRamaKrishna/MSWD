@@ -6,8 +6,8 @@ const Statistics = (props) => {
 		return (
 			<div>
 				<Statistic text="good" value ={...}/>
-        <Statistic text="neutral" value ={...}/>
-        <Statistic text="bad" value ={...}/>
+                                <Statistic text="neutral" value ={...}/>
+                                <Statistic text="bad" value ={...}/>
 			</div>
 		)
 	} 
