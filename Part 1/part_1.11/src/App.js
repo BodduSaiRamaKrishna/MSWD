@@ -23,7 +23,8 @@ const Statistics = (props) => {
          <tr>
             <td><h3>Positive: {props.positive}</h3></td>
          </tr>
-		</div>
+        </table>
+     </div>
 	)
 }
 
