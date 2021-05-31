@@ -12,7 +12,7 @@ const Statistics = (props) => {
             <td><h3>Neutral: {props.neutral}</h3></td>
          </tr>
          <tr>
-            <td><h3>Bad: {props.bad}</h3></tr>
+            <td><h3>Bad: {props.bad}</h3></td>
          </tr>
          <tr>
             <td><h3>All: {props.All}</h3></td>
