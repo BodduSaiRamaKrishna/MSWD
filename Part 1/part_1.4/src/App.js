@@ -1,3 +1,5 @@
+import React, { useState } from 'react'
+
 const App = () => {
 	const course = 'Mearn Stack Development'
 	const parts = [
