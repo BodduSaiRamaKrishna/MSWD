@@ -56,7 +56,7 @@ const App = (props) => {
         </form>
         <h2>Numbers</h2>
         <div>
-          {newName} {newNumber}
+          {newName} <br/> {newNumber}
         </div>
       </div>
     )
