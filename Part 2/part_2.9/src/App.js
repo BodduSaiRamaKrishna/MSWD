@@ -6,6 +6,7 @@ const App = (props) => {
   const [newName, setNewName] = useState('')
   const [newNumber,setNewNumber]=useState('')
   const [ searchName, setSearchName ] = useState("")
+  const [ filterChange, setFilterChange ] = useState(false) 
 
   const addName = (event) => {
     event.preventDefault()
@@ -46,6 +47,16 @@ const App = (props) => {
 		console.log(event.target.value)
 		setSearchName(event.target.value)
 	}
+  
+  const filterItems = (query) => {
+		const filter_result = persons.filter(person => person.name.toLowerCase().split(" ").join("").indexOf(query.toLowerCase()) !== -1)
+		
+		return filter_result
+	}
+	
+   const personsToShow = filterChange
+		? filterItems(searchName)
+		: persons
 
   return (
       <div>
