@@ -10,7 +10,7 @@ const App = () => {
         const bad =props.bad
         const all=props.good+props.neutral+props.bad
         const average = (props.good + (props.bad*-1))/all
-        const positive=props.good/all*100
+        const positive=(props.good + props.neutral)/(props.good + props.neutral + props.bad)
         if (all===0){
           return (
             <div>
@@ -52,4 +52,4 @@ const Button =(props)=>{
     <button onClick={props.click}>{props.text}</button>
   )
 }
-export default App
+export default App;
