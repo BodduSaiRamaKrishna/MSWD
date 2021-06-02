@@ -88,7 +88,6 @@ const App = () => {
                 <ul>
                   {displayToShow[0].languages.map(one => <li key = {one.name}>{one.name}</li>)}
                 </ul>
-              <img src = {displayToShow[0].flag} alt = "" width = "130px" height = "100px"/><br/>
               <h3>Weather in {displayToShow[0].capital}</h3>
               <p>Day: {weather[Math.floor(Math.random()*weather.length)].day}</p>
               <p>Night: {weather[Math.floor(Math.random()*weather.length)].night}</p>
