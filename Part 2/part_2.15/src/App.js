@@ -43,20 +43,6 @@ const App = () => {
     setNewNumber(event.target.value)
   }
 
-  const handleChange = (name) => {
-		const person = persons.find(n => n.name === name) 
-		const change = {...person, number:newNumber}
-		const id = person.id 
-		
-		const result = window.confirm(name + " is already added to Phonebook, replace the old number with a new one?")
-		
-		if (result) {
-			Person
-				.update(id, change)
-				.then(response => setPersons(persons.map(person => person.id === id ? response : person)))
-		}
-	}
-
   const displayToShow = showAll
   ? persons
   : persons.filter(person => person.important)
@@ -79,8 +65,6 @@ const App = () => {
 				<br />
 				<button type = "submit">ADD</button>
 			</form><br/>
-			<form onSubmit = {() => handleChange(newName)}>
-			</form>
       <h2>Numbers</h2>
 			{displayToShow.map(person => {
 				return(
